@@ -3,18 +3,19 @@
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
     --apt-recommends true \
-    --architecture amd64 \
+    --architecture "${ARCH:=amd64}" \
     --archive-areas "main contrib non-free" \
     --bootloaders "grub-pc grub-efi" \
     --binary-image iso-hybrid \
     --cache true \
     --cache-packages true \
     --checksums sha256 \
-    --debian-installer cdrom \
+    --debian-installer live \
     --debian-installer-distribution daily \
     --debian-installer-gui false \
-    --distribution sid \
+    --distribution "${DIST:=testing}" \
     --firmware-binary true \
+    --firmware-chroot true \
     --hdd-label "sigma-linux" \
     --image-name "sigma-linux" \
     --iso-application "Sigma Linux" \
