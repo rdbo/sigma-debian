@@ -1,0 +1,4 @@
+#!/bin/sh
+
+systemctl disable ssh apache2 mariadb postgresql tor
+systemctl enable iwd
