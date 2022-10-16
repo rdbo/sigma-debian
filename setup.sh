@@ -23,5 +23,6 @@ lb config \
     --bootappend-install "net.ifnames=0"
 
 mkdir -p config/includes.chroot/usr/local/src
-tar -cJf config/includes.chroot/usr/local/src/live-build.tar.xz config/ setup.sh build.sh clean.sh
+tar -cJf live-build.tar.xz config/ setup.sh build.sh clean.sh
+mv live-build.tar.xz config/includes.chroot/usr/local/src/
 

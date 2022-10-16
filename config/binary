@@ -22,10 +22,10 @@ LB_BOOTAPPEND_LIVE_FAILSAFE="boot=live components memtest noapic noapm nodma nom
 LB_BOOTLOADER_BIOS="grub-pc"
 
 # Set EFI bootloader
-LB_BOOTLOADER_EFI=""
+LB_BOOTLOADER_EFI="grub-efi"
 
 # Set bootloaders
-LB_BOOTLOADERS="grub-pc"
+LB_BOOTLOADERS="grub-pc grub-efi"
 
 # Set checksums
 LB_CHECKSUMS="sha256 md5"
