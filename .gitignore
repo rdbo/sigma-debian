@@ -2,3 +2,4 @@
 /uefi_start.sh
 /cache/
 /config/includes.chroot/usr/local/src/live-build.tar.xz
+/config/packages.chroot/*

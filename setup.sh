@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# NOTE:
+# Build 'sigma-deb' first and copy the .deb package from
+# sigma-deb/bin/sigma-linux*.deb to config/packages.chroot/
+
 mkdir -p config/includes.chroot/usr/local/src/live-build
 tar -cJf live-build.tar.xz config/ setup.sh build.sh clean.sh
 mv live-build.tar.xz config/includes.chroot/usr/local/src/live-build/
