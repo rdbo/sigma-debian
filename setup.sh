@@ -1,5 +1,9 @@
 #!/bin/sh
 
+mkdir -p config/includes.chroot/usr/local/src/live-build
+tar -cJf live-build.tar.xz config/ setup.sh build.sh clean.sh
+mv live-build.tar.xz config/includes.chroot/usr/local/src/live-build/
+
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
     --apt-recommends true \
@@ -22,8 +26,3 @@ lb config \
     --iso-publisher "Rdbo" \
     --iso-volume "Sigma Linux" \
     --bootappend-install "net.ifnames=0 biosdevname=0"
-
-mkdir -p config/includes.chroot/usr/local/src
-tar -cJf live-build.tar.xz config/ setup.sh build.sh clean.sh
-mv live-build.tar.xz config/includes.chroot/usr/local/src/
-
