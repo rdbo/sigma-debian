@@ -1,0 +1,12 @@
+label live-@FLAVOUR@
+	menu label ^Sigma Linux Live (@FLAVOUR@)
+	menu default
+	linux @LINUX@ net.ifnames=0 biosdevname=0
+	initrd @INITRD@
+	append @APPEND_LIVE@
+
+label live-@FLAVOUR@-failsafe
+	menu label Sigma Linux Live (@FLAVOUR@ fail-safe mode)
+	linux @LINUX@ net.ifnames=0 biosdevname=0
+	initrd @INITRD@
+	append @APPEND_LIVE_FAILSAFE@
