@@ -18,8 +18,12 @@ lb config \
     --cache true \
     --cache-packages true \
     --checksums sha256 \
+    --chroot-filesystem squashfs \
+    --chroot-squashfs-compression-level 9 \
+    --chroot-squashfs-compression-type xz \
+    --compression xz \
     --debian-installer live \
-    --debian-installer-distribution daily \
+    --debian-installer-distribution testing \
     --debian-installer-gui false \
     --distribution "${DIST:=testing}" \
     --firmware-binary true \

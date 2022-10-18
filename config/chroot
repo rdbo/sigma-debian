@@ -4,10 +4,10 @@
 LB_CHROOT_FILESYSTEM="squashfs"
 
 # Set chroot squashfs compression level
-LB_CHROOT_SQUASHFS_COMPRESSION_LEVEL=""
+LB_CHROOT_SQUASHFS_COMPRESSION_LEVEL="9"
 
 # Set chroot squashfs compression type
-LB_CHROOT_SQUASHFS_COMPRESSION_TYPE=""
+LB_CHROOT_SQUASHFS_COMPRESSION_TYPE="xz"
 
 # Set union filesystem
 LB_UNION_FILESYSTEM="overlay"

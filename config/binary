@@ -31,7 +31,7 @@ LB_BOOTLOADERS="grub-pc grub-efi"
 LB_CHECKSUMS="sha256 md5"
 
 # Set compression
-LB_COMPRESSION="none"
+LB_COMPRESSION="xz"
 
 # Support dm-verity on rootfs
 LB_DM_VERITY=""
@@ -53,7 +53,7 @@ LB_BUILD_WITH_CHROOT="true"
 LB_DEBIAN_INSTALLER="live"
 
 # Set debian-installer suite
-LB_DEBIAN_INSTALLER_DISTRIBUTION="daily"
+LB_DEBIAN_INSTALLER_DISTRIBUTION="testing"
 
 # Set debian-installer preseed filename/url
 LB_DEBIAN_INSTALLER_PRESEEDFILE=""
