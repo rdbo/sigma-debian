@@ -1,5 +1,6 @@
 /start.sh
 /uefi_start.sh
 /cache/
-/config/includes.chroot/usr/local/src/live-build/
+/config
 /sigma-config/packages.chroot
+/.build

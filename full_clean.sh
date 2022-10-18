@@ -1,4 +1,4 @@
 #!/bin/sh
 
-lb clean
+./clean.sh
 rm -rf cache config

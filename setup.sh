@@ -27,6 +27,8 @@ lb config \
     --iso-volume "Sigma Linux" \
     --bootappend-install "net.ifnames=0 biosdevname=0"
 
+echo "Archiving source code..."
 mkdir -p config/includes.chroot/usr/local/src/live-build
 tar -cJf config/includes.chroot/usr/local/src/live-build/live-build.tar.xz sigma-config/ setup.sh build.sh clean.sh full_clean.sh
+echo "Copying 'sigma-config' to 'config'..."
 cp -rf sigma-config/. config/
