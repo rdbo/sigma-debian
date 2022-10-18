@@ -13,7 +13,7 @@ LB_APT_INDICES="true"
 LB_BOOTAPPEND_LIVE="boot=live components quiet splash noeject"
 
 # Set boot parameters
-LB_BOOTAPPEND_INSTALL="net.ifnames=0"
+LB_BOOTAPPEND_INSTALL="net.ifnames=0 biosdevname=0"
 
 # Set boot parameters
 LB_BOOTAPPEND_LIVE_FAILSAFE="boot=live components memtest noapic noapm nodma nomce nolapic nomodeset nosmp nosplash vga=788"
@@ -50,7 +50,7 @@ LB_ZSYNC="true"
 LB_BUILD_WITH_CHROOT="true"
 
 # Set debian-installer
-LB_DEBIAN_INSTALLER="cdrom"
+LB_DEBIAN_INSTALLER="live"
 
 # Set debian-installer suite
 LB_DEBIAN_INSTALLER_DISTRIBUTION="daily"
