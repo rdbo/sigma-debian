@@ -1,4 +1,4 @@
 #!/bin/sh
 
 lb clean
-rm -rf cache
+rm -rf cache config

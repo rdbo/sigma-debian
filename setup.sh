@@ -2,11 +2,7 @@
 
 # NOTE:
 # Build 'sigma-deb' first and copy the .deb package from
-# sigma-deb/bin/sigma-linux*.deb to config/packages.chroot/
-
-mkdir -p config/includes.chroot/usr/local/src/live-build
-tar -cJf live-build.tar.xz config/ setup.sh build.sh clean.sh
-mv live-build.tar.xz config/includes.chroot/usr/local/src/live-build/
+# sigma-deb/bin/sigma-linux*.deb to sigma-config/packages.chroot/
 
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
@@ -18,12 +14,8 @@ lb config \
     --cache true \
     --cache-packages true \
     --checksums sha256 \
-    --chroot-filesystem squashfs \
-    --chroot-squashfs-compression-level 9 \
-    --chroot-squashfs-compression-type xz \
-    --compression xz \
     --debian-installer live \
-    --debian-installer-distribution testing \
+    --debian-installer-distribution ${DIST:=testing} \
     --debian-installer-gui false \
     --distribution "${DIST:=testing}" \
     --firmware-binary true \
@@ -34,3 +26,7 @@ lb config \
     --iso-publisher "Rdbo" \
     --iso-volume "Sigma Linux" \
     --bootappend-install "net.ifnames=0 biosdevname=0"
+
+mkdir -p config/includes.chroot/usr/local/src/live-build
+tar -cJf config/includes.chroot/usr/local/src/live-build/live-build.tar.xz sigma-config/ setup.sh build.sh clean.sh full_clean.sh
+cp -rf sigma-config/. config/
