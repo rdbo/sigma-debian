@@ -4,6 +4,8 @@
 # Build 'sigma-deb' first and copy the .deb package from
 # sigma-deb/bin/sigma-linux*.deb to sigma-config/packages.chroot/
 
+DIST=sid
+
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
     --apt-recommends true \
@@ -15,9 +17,9 @@ lb config \
     --cache-packages true \
     --checksums sha256 \
     --debian-installer live \
-    --debian-installer-distribution ${DIST:=testing} \
+    --debian-installer-distribution "$DIST" \
     --debian-installer-gui false \
-    --distribution "${DIST:=testing}" \
+    --distribution "$DIST" \
     --firmware-binary true \
     --firmware-chroot true \
     --hdd-label "sigma-linux" \
