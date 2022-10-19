@@ -4,17 +4,20 @@
 # Build 'sigma-deb' first and copy the .deb package from
 # sigma-deb/bin/sigma-linux*.deb to sigma-config/packages.chroot/
 
+ARCH=amd64
 DIST=sid
 
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
     --apt-recommends true \
-    --architecture "${ARCH:=amd64}" \
+    --architecture "$ARCH" \
     --archive-areas "main contrib non-free" \
-    --bootloaders "grub-pc grub-efi" \
     --binary-image iso-hybrid \
+    --bootappend-install "net.ifnames=0 biosdevname=0" \
+    --bootloaders "grub-pc grub-efi" \
     --cache true \
     --cache-packages true \
+    --clean \
     --checksums sha256 \
     --debian-installer live \
     --debian-installer-distribution "$DIST" \
@@ -27,7 +30,7 @@ lb config \
     --iso-application "Sigma Linux" \
     --iso-publisher "Rdbo" \
     --iso-volume "Sigma Linux" \
-    --bootappend-install "net.ifnames=0 biosdevname=0"
+    --linux-packages "linux-image linux-headers"
 
 echo "Archiving source code..."
 mkdir -p config/includes.chroot/usr/local/src/live-build
