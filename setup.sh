@@ -5,7 +5,7 @@
 # sigma-deb/bin/sigma-linux*.deb to sigma-config/packages.chroot/
 
 ARCH=amd64
-DIST=sid
+DIST=bookworm
 
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
