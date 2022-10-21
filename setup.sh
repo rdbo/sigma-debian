@@ -5,7 +5,8 @@
 # sigma-deb/bin/sigma-linux*.deb to sigma-config/packages.chroot/
 
 ARCH=amd64
-DIST=bookworm
+DIST=sid
+MIRROR="http://deb.debian.org/debian/"
 
 lb config \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
@@ -30,7 +31,10 @@ lb config \
     --iso-application "Sigma Linux" \
     --iso-publisher "Rdbo" \
     --iso-volume "Sigma Linux" \
-    --linux-packages "linux-image linux-headers"
+    --linux-packages "linux-image linux-headers" \
+    --mirror-bootstrap "$MIRROR" \
+    --mirror-debian-installer "$MIRROR" \
+    --mirror-binary "$MIRROR"
 
 echo "Archiving source code..."
 mkdir -p config/includes.chroot/usr/local/src/live-build
