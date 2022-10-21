@@ -1,0 +1,37 @@
+---
+componentName:  sigma 
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         Sigma Linux
+    shortProductName:    Sigma Linux
+    version:             1.0.0
+    shortVersion:        1
+    versionedName:       Sigma Linux 1.0.0
+    shortVersionedName:  Sigma Linux
+    bootloaderEntryName: Sigma Linux
+    productUrl:          https://github.com/rdbo/sigma-debian
+    supportUrl:          https://github.com/rdbo/sigma-debian
+    knownIssuesUrl:      https://github.com/rdbo/sigma-debian
+    releaseNotesUrl:     https://github.com/rdbo/sigma-debian
+
+images:
+    productLogo:         "sigma-logo.png"
+    productIcon:         "sigma-logo.png"
+    productWelcome:      "sigma-logo.png"
+    # productWallpaper:    "wallpaper.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#101a20"
+   sidebarText:          "#00ffc8"
+   sidebarTextSelect:    "#00ae88"
+   sidebarTextCurrent:   "#101a20"
+   sidebarBackgroundCurrent: "#00ffc8"
+
+slideshowAPI: 2
