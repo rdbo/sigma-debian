@@ -2,3 +2,5 @@ iwd
 wireguard-tools
 openvpn
 tor
+wireshark
+termshark
