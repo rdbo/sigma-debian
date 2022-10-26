@@ -1,0 +1,12 @@
+xinit
+xrandr
+dunst
+libnotify-bin
+feh
+vim
+maim
+papirus-icon-theme
+adwaita-icon-theme
+x11-xkb-utils
+x11-xserver-utils
+x11-utils

@@ -1,0 +1,5 @@
+2022/10/16-22:03:44.369 3b Creating DB /home/user/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm since it was missing.
+2022/10/16-22:03:44.505 3b Reusing MANIFEST /home/user/.config/chromium/Default/Local Extension Settings/cjpalhdlnbpafiamejdnhcphjbkeiagm/MANIFEST-000001
+2022/10/16-22:03:46.947 122 Level-0 table #5: started
+2022/10/16-22:03:47.053 122 Level-0 table #5: 1595702 bytes OK
+2022/10/16-22:03:47.100 122 Delete type=0 #3

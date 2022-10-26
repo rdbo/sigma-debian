@@ -11,9 +11,8 @@ MIRROR="http://deb.debian.org/debian/"
 echo "Copying 'sigma-config' to 'config'..."
 cp -rf sigma-config/. config/
 
-lb config \
+lb config noauto \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
-    --apt-recommends true \
     --architecture "$ARCH" \
     --archive-areas "main contrib non-free" \
     --binary-image iso-hybrid \

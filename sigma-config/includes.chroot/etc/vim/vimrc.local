@@ -1,0 +1,29 @@
+set rtp^=/etc/vim/pack/themes/start/vim-code-dark
+set rtp^=/etc/vim/pack/vendor/start/nerdtree
+set nocompatible
+set number
+set cursorline
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+
+colorscheme codedark
+
+hi CursorLine cterm=NONE
+hi CursorLineNr cterm=NONE term=bold ctermfg=49
+hi LineNr cterm=NONE ctermfg=49
+
