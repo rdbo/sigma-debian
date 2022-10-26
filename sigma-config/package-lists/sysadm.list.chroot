@@ -1,4 +1,4 @@
-man
+man-db
 fakeroot
 ssh
 rsync
@@ -17,6 +17,5 @@ xz-utils
 p7zip-full
 p7zip-rar
 ntfs-3g
-cfdisk
 btop
 firejail

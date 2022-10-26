@@ -11,6 +11,11 @@ MIRROR="http://deb.debian.org/debian/"
 echo "Copying 'sigma-config' to 'config'..."
 cp -rf sigma-config/. config/
 
+echo "Archiving source code..."
+mkdir -p config/includes.chroot/usr/local/src/live-build
+tar -cJf config/includes.chroot/usr/local/src/live-build/live-build.tar.xz sigma-config/ setup.sh build.sh clean.sh full_clean.sh
+
+echo "Running lb config..."
 lb config noauto \
     --apt-recommends false \
     --architecture "$ARCH" \
@@ -37,7 +42,3 @@ lb config noauto \
     --mirror-bootstrap "$MIRROR" \
     --mirror-debian-installer "$MIRROR" \
     --mirror-binary "$MIRROR"
-
-echo "Archiving source code..."
-mkdir -p config/includes.chroot/usr/local/src/live-build
-tar -cJf config/includes.chroot/usr/local/src/live-build/live-build.tar.xz sigma-config/ setup.sh build.sh clean.sh full_clean.sh
