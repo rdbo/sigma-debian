@@ -13,6 +13,7 @@ cp -rf sigma-config/. config/
 
 lb config noauto \
     --apt-options '--yes -o Dpkg::Options::="--force-overwrite"' \
+    --apt-recommends false \
     --architecture "$ARCH" \
     --archive-areas "main contrib non-free" \
     --binary-image iso-hybrid \
