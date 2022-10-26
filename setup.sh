@@ -23,11 +23,9 @@ lb config noauto \
     --binary-image iso-hybrid \
     --bootappend-install "net.ifnames=0 biosdevname=0" \
     --bootloaders "grub-pc grub-efi" \
-    --cache true \
-    --cache-packages true \
     --clean \
     --checksums sha256 \
-    --debian-installer live \
+    --debian-installer none \
     --debian-installer-distribution "$DIST" \
     --debian-installer-gui false \
     --distribution "$DIST" \

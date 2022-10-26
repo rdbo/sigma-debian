@@ -4,7 +4,7 @@ gdb
 git
 make
 cmake
-build-essentials
+build-essential
 checkinstall
 live-build
 python3
