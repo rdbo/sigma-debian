@@ -1,4 +1,4 @@
 #!/bin/sh
 
-./clean
-rm -rf cache/bootstrap
+./clean.sh
+rm -rf cache/bootstrap cache/contents*
